@@ -4,10 +4,10 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 export default function ContactForm() {
   return (
-    <div className='container mx-auto px-[10%] py-[60px]'>
+    <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px]'>
       <div className='text-center'>
-        <p className='font-[600] text-[46px] leading-[46px]'>Contact Us</p>
-        <p className='text-[17px] leading-[25.5px] mt-[15px]'>Feel free to reach us for new project initiatives, product enhancement, technical support. Our team will get back to you promptly.</p>
+        <p className='font-[600] text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>Contact Us</p>
+        <p className='text-[14px] lg:text-[17px] leading-[25.5px] mt-[15px]'>Feel free to reach us for new project initiatives, product enhancement, technical support. Our team will get back to you promptly.</p>
       </div>
       <Formik
         initialValues={{
@@ -45,7 +45,7 @@ export default function ContactForm() {
         {({ isSubmitting }) => (
           <Form>
             <div className='flex flex-col gap-2 py-[40px]'>
-              <div className='flex gap-2'>
+              <div className='flex flex-col md:flex-row gap-2'>
                 <div className='flex flex-col w-[50%]'>
                   <label htmlFor="firstName">First Name*</label>
                   <Field type="text" name="firstName" className='border-[2px] rounded-md p-[10px]' />

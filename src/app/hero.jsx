@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='container mx-auto px-[10%] h-[90dvh] grid grid-cols-2'>
+    <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px] grid md:grid-cols-2'>
       <div className=''>
         <p className='font-[600] text-[41px] leading-[37px] mt-[60px]'>
           Explore RIOD <br />
@@ -26,7 +26,7 @@ export default function Hero() {
           </div>
         </Link>
         <div className='h-[1px] w-full bg-gray-300 my-[20px]'></div>
-        <div className='flex justify-evenly'>
+        <div className='flex flex-col md:flex-row gap-5 justify-evenly'>
           <div className='flex flex-col items-center'>
             <p className='font-[600] text-[28px] leading-[28px]'>25,000+</p>
             <p className='text-[15px] leading-[37.5px]'>Products in the market</p>

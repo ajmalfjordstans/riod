@@ -17,13 +17,13 @@ const ProductList = [
 
 export default function Products() {
   return (
-    <div className='container mx-auto py-[30px] px-[10%] flex flex-col items-center'>
-      <p className='font-[600] text-[46px] leading-[46px]'>Build Products with RIOD</p>
-      <div className='flex flex-wrap justify-center gap-7 mt-[30px]'>
+    <div className='container mx-auto py-[30px] px-[5%] lg:px-[10%] flex flex-col items-center'>
+      <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>Build Products with RIOD</p>
+      <div className='flex flex-wrap justify-center gap-2 md:gap-7 mt-[30px]'>
         {ProductList.map((product, id) => {
           return (
             <div
-              key={id} className='hover:scale-[1.2] border-[1px] border-gray-500 p-[15px] cursor-pointer transition-all duration-300 rounded-sm font-[700]'
+              key={id} className='hover:scale-[1.2] border-[1px] border-gray-500 p-[10px] md:p-[15px] cursor-pointer transition-all duration-300 rounded-sm font-[700]'
             >{product}</div>
           )
         })}

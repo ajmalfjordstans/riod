@@ -10,7 +10,7 @@ export default function Footer() {
   const onChange = ({ target }) => setEmail(target.value);
   return (
     <div className='bg-[#141414] text-white'>
-      <div className='container mx-auto px-[10%] py-[60px] grid grid-cols-4'>
+      <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px] gap-10 grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2'>
         <Image src="/images/riod-white.png" height={50} width={140} className='h-[40px] w-[100px] ' alt='logo' />
         <div className='flex flex-col gap-2'>
           <p className='font-[700]'>Help Center</p>
@@ -48,8 +48,8 @@ export default function Footer() {
         </div>
       </div>
       <div className='bg-black'>
-        <div className='container mx-auto px-[10%] py-[20px] flex justify-between'>
-          <p className='font-[600]'>© Copyright 2012 - 2023 | RIOD | All rights reserved</p>
+        <div className='container mx-auto px-[5%] lg:px-[10%] py-[20px] flex flex-wrap justify-between gap-2'>
+          <p className='font-[600] text-[12px] md:text-[16px]'>© Copyright 2012 - 2023 | RIOD | All rights reserved</p>
           <div className='flex gap-4'>
             <Link href="https://www.facebook.com/riodlab.electronics/">
               <Image src="/icons/facebook.png" height={30} width={30} alt='facebook' className='hover:cursor-pointer' />

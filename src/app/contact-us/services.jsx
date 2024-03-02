@@ -31,8 +31,8 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <div className='container mx-auto px-[10%] py-[60px] flex flex-col items-center'>
-      <div className='grid grid-cols-3 gap-12 mt-[30px]'>
+    <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px] flex flex-col items-center'>
+      <div className='grid md:grid-cols-3 gap-12 mt-[30px]'>
         {servicesData.map((data, id) => {
           return (
             <div className='flex flex-col items-center gap-4 relative pb-[70px]' key={id}>
@@ -40,7 +40,7 @@ export default function Services() {
               <p className='font-[600] text-[24px] leading-[24px]'>{data.title}</p>
               <p className='text-[14px] leading-[22.5px] text-center'>{data.desc}</p>
               <Link href={data.link} className='absolute bottom-0'>
-                <p className='font-[600] text-[24px] leading-[24px] underline'>{data.button}</p>
+                <p className='font-[600] text-[18px] lg:text-[24px] leading-[24px] underline'>{data.button}</p>
               </Link>
             </div>
           )

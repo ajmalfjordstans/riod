@@ -56,11 +56,11 @@ export default function Industries() {
     <div className='container mx-auto px-[10%] py-[20px] flex flex-col justify-center'>
       <Image src="/images/logo.png" height={50} width={140} className='h-[40px] w-[100px] mx-auto my-[30px]' alt='logo' />
       <div className='text-center'>
-        <p className='font-[600] text-[46px] leading-[46px]'>Powering Innovation Across Industries</p>
-        <p className='text-[17px] leading-[25.5px] mt-[15px]'>At RIOD, we believe that technology has the power to transform any industry. That&apos;s why we&apos;re dedicated to developing innovative solutions that help businesses of all sizes to grow and succeed.</p>
+        <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>Powering Innovation Across Industries</p>
+        <p className='text-[14px] lg:text-[17px] leading-[25.5px] mt-[15px]'>At RIOD, we believe that technology has the power to transform any industry. That&apos;s why we&apos;re dedicated to developing innovative solutions that help businesses of all sizes to grow and succeed.</p>
       </div>
-      <div className='flex justify-center'>
-        <div className='w-[224px] flex flex-col gap-1 justify-center'>
+      <div className='flex justify-center flex-col-reverse md:flex-row'>
+        <div className='md:w-[224px] grid grid-cols-2 md:grid-cols-1 gap-1 justify-center'>
           {industriesData.map((ind, id) => {
             return (
               <div className='flex gap-3 p-3 hover:bg-gray-200 cursor-pointer' key={id}
@@ -72,7 +72,7 @@ export default function Industries() {
             )
           })}
         </div>
-        <Image src={selected.img} height={1240} width={1240} alt='image' className='h-[540px] w-[800px] transition-all duration-200' />
+        <Image src={selected.img} height={1240} width={1240} alt='image' className=' md:h-[400px] lg:h-[540px] lg:w-[800px] transition-all duration-200' />
       </div>
     </div>
   )

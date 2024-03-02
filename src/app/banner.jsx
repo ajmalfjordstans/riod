@@ -7,7 +7,7 @@ import React from 'react'
 export default function Banner() {
   return (
     <div className='bg-[#B7F598]'>
-      <div className="container mx-auto px-[10%] grid grid-cols-2 py-[60px]">
+      <div className="container mx-auto px-[5%] lg:px-[10%] grid grid-cols-1 md:grid-cols-2 py-[60px]">
         <div className=''>
           <p className='font-[600] text-[41px] leading-[37px] mt-[60px]'>
             Over 25000+ products in the market are powered by our Tech.

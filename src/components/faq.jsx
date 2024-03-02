@@ -52,8 +52,8 @@ export default function FAQ() {
 
   return (
     <div className='container mx-auto py-[30px] px-[10%] flex flex-col items-center'>
-      <p className='font-[600] text-[46px] leading-[46px]'>FAQ</p>
-      <p className='text-[17px] leading-[22.5px] mt-[15px]'>If you can’t find your question, please reach out to us directly.</p>
+      <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>FAQ</p>
+      <p className='text-[14px] lg:text-[17px] leading-[22.5px] mt-[15px]'>If you can’t find your question, please reach out to us directly.</p>
       <div className='my-[20px]'>
         {Answers.map((faq, id) => {
           return (

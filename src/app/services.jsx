@@ -36,16 +36,16 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <div className='container mx-auto py-[30px] px-[10%] flex flex-col items-center'>
-      <p className='font-[600] text-[46px] leading-[46px]'>Our Services</p>
-      <p className='text-[17px] leading-[22.5px] mt-[15px]'>RIOD Services for successful product engineering</p>
-      <div className='grid grid-cols-3 gap-12 mt-[30px]'>
+    <div className='container mx-auto py-[30px] px-[5%] lg:px-[10%] flex flex-col items-center'>
+      <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>Our Services</p>
+      <p className='text-[14px] lg:text-[17px] leading-[22.5px] mt-[15px]'>RIOD Services for successful product engineering</p>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-[30px]'>
         {servicesData.map((data, id) => {
           return (
             <div className='flex flex-col items-center gap-4' key={id}>
-              <Image src={data.img} height={187} width={290} alt='services' className='object-cover h-[187px] w-[289px]' />
-              <p className='font-[600] text-[24px] leading-[24px]'>{data.title}</p>
-              <p className='text-[17px] leading-[22.5px] text-center'>{data.desc}</p>
+              <Image src={data.img} height={187} width={290} alt='services' className='object-contain h-[187px] w-full' />
+              <p className='font-[600] text-[24px] leading-[24px] text-center'>{data.title}</p>
+              <p className='text-[14px] lg:text-[17px] leading-[22.5px] text-center'>{data.desc}</p>
             </div>
           )
         })}

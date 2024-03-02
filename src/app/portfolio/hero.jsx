@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='container mx-auto px-[10%] h-[90dvh] grid grid-cols-2'>
+    <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px] grid grid-cols-1 md:grid-cols-2 '>
       <Image src="/images/component-3.png" height={1200} width={900} alt='component' className='h-full w-full object-contain' />
       <div className='bg-[#FFE979] p-[50px] flex flex-col justify-center gap-4 my-[30px]'>
         <p className='font-[500] text-[22px]'>Simplifying Product Development</p>
