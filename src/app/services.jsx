@@ -38,7 +38,7 @@ export default function Services() {
   return (
     <div className='container mx-auto py-[30px] px-[10%] flex flex-col items-center'>
       <p className='font-[600] text-[46px] leading-[46px]'>Our Services</p>
-      <p className='text-[17px] leading-[22.5px] mt-[15px]'>RNDSquare Services for successful product engineering</p>
+      <p className='text-[17px] leading-[22.5px] mt-[15px]'>RIOD Services for successful product engineering</p>
       <div className='grid grid-cols-3 gap-12 mt-[30px]'>
         {servicesData.map((data, id) => {
           return (

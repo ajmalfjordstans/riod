@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <div className='bg-black'>
         <div className='container mx-auto px-[10%] py-[20px] flex justify-between'>
-          <p className='font-[600]'>© Copyright 2012 - 2023 | RND Square | All rights reserved</p>
+          <p className='font-[600]'>© Copyright 2012 - 2023 | RIOD | All rights reserved</p>
           <div className='flex gap-4'>
             <Link href="https://www.facebook.com/riodlab.electronics/">
               <Image src="/icons/facebook.png" height={30} width={30} alt='facebook' className='hover:cursor-pointer' />
