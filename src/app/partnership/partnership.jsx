@@ -1,5 +1,7 @@
 'use client'
 
+import Reveal from '@/components/animations/reveal'
+import RevealRight from '@/components/animations/reveal-right'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -35,19 +37,21 @@ export default function Partnership() {
         <p className='text-[14px] lg:text-[17px] leading-[25.5px] mt-[15px]'>At RIOD, we believe that partnerships are the cornerstone of success. We invite you to become our valued business partner and embark on a journey towards excellence and innovation. Together, we will reshape the future and create opportunities for growth and prosperity.</p>
       </div>
       <div className='w-full my-[30px] flex md:flex-row flex-col justify-between'>
-        <div className='bg-[#FFE979] w-[358px] rounded-sm flex flex-col gap-5 p-[20px] justify-center items-center '>
-          <div className='border-[2px] border-white rounded-full p-[13px]'>
-            <Image src='/icons/peace-hand.svg' alt='peace' height={80} width={80} className='w-6 h-6' />
-          </div>
-          <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>#Best Margin</p>
-          <p className='text-[14px] lg:text-[17px] leading-[25.5px] mt-[15px] text-center'>Our commitment to your success starts with Industry-best margins for our business partners.
-            Explore our partnership program.</p>
-          <Link href={'/partnership'}>
-            <div className='bg-white p-[15px]'>
-              <p className='font-[500]'>Download Business partner Guide</p>
+        <Reveal>
+          <div className='bg-[#FFE979] w-[358px] rounded-sm flex flex-col gap-5 p-[20px] justify-center items-center '>
+            <div className='border-[2px] border-white rounded-full p-[13px]'>
+              <Image src='/icons/peace-hand.svg' alt='peace' height={80} width={80} className='w-6 h-6' />
             </div>
-          </Link>
-        </div>
+            <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>#Best Margin</p>
+            <p className='text-[14px] lg:text-[17px] leading-[25.5px] mt-[15px] text-center'>Our commitment to your success starts with Industry-best margins for our business partners.
+              Explore our partnership program.</p>
+            <Link href={'/partnership'}>
+              <div className='bg-white p-[15px]'>
+                <p className='font-[500]'>Download Business partner Guide</p>
+              </div>
+            </Link>
+          </div>
+        </Reveal>
         <div className='md:w-[678px] bg-[#FAFBFC] flex flex-col p-[40px]'>
           <p className='font-[600] text-[32px] leading-[38px] lg:leading-[46px]'>Business Associate Program</p>
           <div className='grid md:grid-cols-2 gap-4'>
@@ -60,17 +64,19 @@ export default function Partnership() {
           <p>We are actively seeking global business partnerships.</p>
         </div>
       </div>
-      <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[30px]'>
-        {servicesData.map((data, id) => {
-          return (
-            <div className='flex flex-col items-center gap-4' key={id}>
-              <Image src={data.img} height={187} width={290} alt='services' className='object-cover h-auto w-[full]' />
-              <p className='font-[600] text-[20px] leading-[24px]'>{data.title}</p>
-              <p className='text-[14px] leading-[22.5px] text-center'>{data.desc}</p>
-            </div>
-          )
-        })}
-      </div>
+      <RevealRight>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[30px]'>
+          {servicesData.map((data, id) => {
+            return (
+              <div className='flex flex-col items-center gap-4' key={id}>
+                <Image src={data.img} height={187} width={290} alt='services' className='object-cover h-auto w-[full]' />
+                <p className='font-[600] text-[20px] leading-[24px]'>{data.title}</p>
+                <p className='text-[14px] leading-[22.5px] text-center'>{data.desc}</p>
+              </div>
+            )
+          })}
+        </div>
+      </RevealRight>
       <div className='w-full my-[30px] flex flex-col md:flex-row justify-between'>
         <div className='md:w-[678px] bg-[#FAFBFC] flex flex-col p-[40px]'>
           <div className='grid md:grid-cols-2 gap-4'>

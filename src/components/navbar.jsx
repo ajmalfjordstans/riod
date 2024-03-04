@@ -32,34 +32,36 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <Menu placement="bottom-start md:hidden col-span-2">
-        <MenuHandler>
-          <Button className='bg-white flex justify-center items-center'>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </Button>
-        </MenuHandler>
-        <MenuList>
-          <Link href={`/`}>
-            <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Home</p>
-          </Link>
-          <Link href={`/portfolio`}>
-            <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Portfolio</p>
-          </Link>
-          <Link href={`/partnership`}>
-            <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Partnership</p>
-          </Link>
-          <Link href={`/contact-us`}>
-            <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Contact Us</p>
-          </Link>
-        </MenuList>
-      </Menu>
       <Link href={`/partnership`}>
         <div className='w-[90px] px-[20px] py-[12px] text-green-500 border-green-500 border-[1px] hover:bg-green-500 hover:text-white mx-auto transition-colors duration-300 cursor-pointer'>
           Blog&apos;s
         </div>
       </Link>
+      <div className='md:hidden '>
+        <Menu placement="bottom-start" >
+          <MenuHandler>
+            <Button className='bg-white flex justify-center items-center'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </Button>
+          </MenuHandler>
+          <MenuList>
+            <Link href={`/`}>
+              <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Home</p>
+            </Link>
+            <Link href={`/portfolio`}>
+              <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Portfolio</p>
+            </Link>
+            <Link href={`/partnership`}>
+              <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Partnership</p>
+            </Link>
+            <Link href={`/contact-us`}>
+              <p className='px-[10px] py-[5px] hover:bg-blue-gray-100 font-[600] hover:cursor-pointer transition-colors duration-300 cursor-pointer'>Contact Us</p>
+            </Link>
+          </MenuList>
+        </Menu>
+      </div>
     </div>
   )
 }

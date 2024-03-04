@@ -6,6 +6,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import Reveal from './animations/reveal';
 
 function Icon({ id, open }) {
   return (
@@ -54,20 +55,22 @@ export default function FAQ() {
     <div className='container mx-auto py-[30px] px-[10%] flex flex-col items-center'>
       <p className='font-[600]  text-[28px] md:text-[38px] lg:text-[46px] leading-[38px] lg:leading-[46px]'>FAQ</p>
       <p className='text-[14px] lg:text-[17px] leading-[22.5px] mt-[15px]'>If you can’t find your question, please reach out to us directly.</p>
-      <div className='my-[20px]'>
-        {Answers.map((faq, id) => {
-          return (
-            <div key={id}>
-              <Accordion open={open === id} icon={<Icon id={id} open={open}  />}>
-                <AccordionHeader onClick={() => handleOpen(id)}>{faq.question}</AccordionHeader>
-                <AccordionBody>
-                  {faq.answer}
-                </AccordionBody>
-              </Accordion>
-            </div>
-          )
-        })}
-      </div>
+      <Reveal>
+        <div className='my-[20px]'>
+          {Answers.map((faq, id) => {
+            return (
+              <div key={id}>
+                <Accordion open={open === id} icon={<Icon id={id} open={open} />}>
+                  <AccordionHeader onClick={() => handleOpen(id)}>{faq.question}</AccordionHeader>
+                  <AccordionBody>
+                    {faq.answer}
+                  </AccordionBody>
+                </Accordion>
+              </div>
+            )
+          })}
+        </div>
+      </Reveal>
     </div>
   )
 }

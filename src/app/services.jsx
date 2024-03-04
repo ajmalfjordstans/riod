@@ -1,3 +1,5 @@
+'use client'
+import Reveal from '@/components/animations/reveal'
 import Image from 'next/image'
 import React from 'react'
 
@@ -42,11 +44,13 @@ export default function Services() {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-[30px]'>
         {servicesData.map((data, id) => {
           return (
-            <div className='flex flex-col items-center gap-4' key={id}>
-              <Image src={data.img} height={187} width={290} alt='services' className='object-contain h-[187px] w-full' />
-              <p className='font-[600] text-[24px] leading-[24px] text-center'>{data.title}</p>
-              <p className='text-[14px] lg:text-[17px] leading-[22.5px] text-center'>{data.desc}</p>
-            </div>
+            <Reveal key={id}>
+              <div className='flex flex-col items-center gap-4' >
+                <Image src={data.img} height={187} width={290} alt='services' className='object-contain h-[187px] w-full' />
+                <p className='font-[600] text-[24px] leading-[24px] text-center'>{data.title}</p>
+                <p className='text-[14px] lg:text-[17px] leading-[22.5px] text-center'>{data.desc}</p>
+              </div>
+            </Reveal>
           )
         })}
       </div>
