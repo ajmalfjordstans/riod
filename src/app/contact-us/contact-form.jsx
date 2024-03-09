@@ -3,6 +3,28 @@ import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 export default function ContactForm() {
+  const sendMail = async (values, { resetForm }) => {
+    const response = await fetch('https://riod-backend.onrender.com/contact-us', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    })
+    if (response.ok) {
+      // Form submitted successfully
+      console.log('Form submitted successfully.');
+      // setSuccessful(true)
+      // setTimeout(() => {
+      //   setSuccessful(false)
+      // }, 2000);
+      resetForm()
+    } else {
+      // Handle error
+      console.error('Error submitting form.');
+    }
+    console.log(response);
+  }
   return (
     <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px]'>
       <div className='text-center'>
@@ -36,9 +58,10 @@ export default function ContactForm() {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           // Handle form submission here
-          console.log(values);
+          // console.log(values);
+          sendMail(values, { resetForm })
           setSubmitting(false);
         }}
       >

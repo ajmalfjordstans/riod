@@ -8,6 +8,23 @@ import Link from 'next/link';
 export default function Footer() {
   const [email, setEmail] = React.useState("");
   const onChange = ({ target }) => setEmail(target.value);
+  const subscribe = async () => {
+    const response = await fetch('https://riod-backend.onrender.com/newsletter', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({email: email})
+    })
+    if (response.ok) {
+      console.log('Form submitted successfully.');
+      setEmail('')
+    } else {
+      // Handle error
+      console.error('Error submitting form.');
+    }
+    console.log(response);
+  }
   return (
     <div className='bg-[#141414] text-white'>
       <div className='container mx-auto px-[5%] lg:px-[10%] py-[60px] gap-10 grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2'>
@@ -40,6 +57,7 @@ export default function Footer() {
               size="sm"
               color={email ? "gray" : "blue-gray"}
               disabled={!email}
+              onClick={subscribe}
               className="!absolute right-1 top-1 rounded"
             >
               Subscribe
